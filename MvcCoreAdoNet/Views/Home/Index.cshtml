@@ -1,0 +1,23 @@
+﻿<h1 style="text-align:center">VISTA INDEX</h1>
+<div class="row featurette">
+    <div class="col-md-7 order-md-2">
+        <h2 class="featurette-heading fw-normal lh-1">El primer perro que busca por ti. <span class="text-muted">RASTREATOR.</span></h2>
+        <p class="lead">Tu perro de confianza.</p>
+        <button id="botonview" class="btn btn-outline-danger">El Rastreator</button>
+    </div>
+    <div class="col-md-5 order-md-1">
+        <img width="500" height="500" src="~/Images/rastreator.webp" />
+    </div>
+</div>
+
+<hr class="featurette-divider">
+
+@section scripts {
+    <script>
+        $(document).ready(function() {
+            $("#botonview").click(function() {
+                alert("RASTREATOR!!");
+            });
+        })
+    </script>
+}
