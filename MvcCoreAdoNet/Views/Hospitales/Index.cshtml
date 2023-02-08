@@ -2,23 +2,31 @@
 
 <h1 style="color: blue; text-align:center">Lista hospitales</h1>
 
+<a asp-controller="Hospitales" asp-action="CreateHospital">New Hospital</a>
+
 <table class="table table-primary">
     <thead>
         <tr>
+            <th>Id Hospital</th>
             <th>Nombre</th>
             <th>Direccion</th>
             <th>Telefono</th>
             <th>Camas</th>
+            <th></th>
         </tr>
     </thead>
     <tbody>
         @foreach (Hospital hospital in Model)
         {
             <tr>
+                <td>@hospital.IdHospital</td>
                 <td>@hospital.Nombre</td>
                 <td>@hospital.Direccion</td>
                 <td>@hospital.Telefono</td>
                 <td>@hospital.Camas</td>
+                <td>
+                    @Html.ActionLink("Detalles", "Detalles", "Hospitales", new { idhospital = @hospital.IdHospital }, new {@class = "btn btn-primary"})
+                </td>
             </tr>
         }
     </tbody>
